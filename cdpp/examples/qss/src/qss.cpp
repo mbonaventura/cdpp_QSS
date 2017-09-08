@@ -153,7 +153,7 @@ VTime minposroot(double *coeff){
 		ret = VTime(mpr);
 
 		// check for negative values and overflows in VTime.asMsecs() (VTime.asMsecs() is used to advance time)
-		if(mpr < 0 || ret.asMsecs() < 0){
+		if(mpr < 0 || ret.asMsecs() < 0 || ret.asMsecs() >= VTime::Inf.asMsecs()){
 			ret = VTime::Inf;
 		}
 	}
