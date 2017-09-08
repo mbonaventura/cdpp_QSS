@@ -1,0 +1,41 @@
+cd * Simulación de atómicos
+
+Para simular modelos con comportamiento definido por el usuario, primero es
+necesario correr el script de configuración incluido en este directorio:
+
+$ source ./configure
+
+Observar el uso del comando 'source'. También tener en cuenta que sólo basta
+correr este script una única vez.
+
+Luego, supongamos que deseamos compilar un modelo atómico cuyo código fuente
+está en '/home/user/model/'. Para facilitar la tarea, el directorio 'files'
+incluye un Makefile y un template de registración de modelos atómicos (ver
+más abajo). Sugerimos copiar primero estos archivos,
+
+$ cp files/* /home/user/model
+
+Y luego compilar a través de 'make':
+
+$ cd /home/user/model
+$ make
+
+Tener en cuenta que es necesario incluir código para registrar el modelo en
+el kernel del simulador. Por lo general, alcanza con dar una implementación de
+la función
+
+void register_atomics_on(ParallelModelAdmin &admin)
+
+Típiamente esto se logra con una línea similar a la siguiente:
+
+admin.registerAtomic(NewAtomicFunction<ClaseDelModelo>(), "Nombre del modelo");
+
+El archivo 'reg.cpp' en 'files' muestra cómo hacer esto de manera sencilla.
+De utilizarlo, sugerimos seguir las instrucciones en los comentarios TODO.
+
+El binario ejecutable del simulador con el modelo atómico propiamente
+registrado quedará alojado en '/home/user/model/bin/'. De esta forma, podrá
+simularse de la siguiente manera, asumiendo que la descripción del modelo
+está en 'model.ma':
+
+$ bin/cd++ -mmodel.ma

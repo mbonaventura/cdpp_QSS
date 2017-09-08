@@ -1,0 +1,6 @@
+${OBJ_DIR}/atomicstate.o atomicstate.dep : atomicstate.cpp atomicstate.h modelstate.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/warped/notime/BasicState.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/warped/notime/SimulationTime.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/warped/notime/DefaultVTime.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/warped/notime/NoTime.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/warped/common/VTime.h

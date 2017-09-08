@@ -1,0 +1,37 @@
+!SESSION 2017-09-08 10:40:05.856 -----------------------------------------------
+eclipse.buildId=4.3.0.8el6
+java.version=1.7.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 2 0 2017-09-08 10:40:24.314
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-09-08 10:40:24.314
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'
+
+!ENTRY org.eclipse.jface 2 0 2017-09-08 10:40:24.580
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-09-08 10:40:24.580
+!MESSAGE A conflict occurred for CTRL+SHIFT+V:
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bf7be15,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,gtk,system)
+Binding(CTRL+SHIFT+V,
+	ParameterizedCommand(Command(MoreClipboard.commands.morePaste,Paste from MoreClipboard's history pop-up,
+		Move current item up in MoreClipboard ContentsView,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c6bb33c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+
+!ENTRY org.eclipse.ui 2 0 2017-09-08 10:40:26.570
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-09-08 10:40:26.570
+!MESSAGE Commands should really have a category: plug-in='org.eclipse.linuxtools.systemtap.ui.graphing', id='org.eclipse.linuxtools.systemtap.ui.graphing.commands.SaveGraphImage', categoryId='org.eclipse.linuxtools.systemtap.ui.graphing.category.file'

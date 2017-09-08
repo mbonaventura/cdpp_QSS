@@ -1,0 +1,12 @@
+${OBJ_DIR}/distri.o distri.dep : distri.cpp distri.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/misc/except.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/strutil.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/val/real.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/val/undefd.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/impresion.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/val/value.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/val/tbool.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/val/real.h \
+ /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/evaldeb.h \
+ randlib.h

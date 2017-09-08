@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LOCAL_CDPP_PATH="`pwd`/cdpp_kernel"
+
+export CDPP_PATH=$LOCAL_CDPP_PATH
+echo "export CDPP_PATH=${LOCAL_CDPP_PATH}" >> $HOME/.bashrc
