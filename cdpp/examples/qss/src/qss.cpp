@@ -34,6 +34,10 @@ QSS1::QSS1(const string &name) :
 
     // mierda temporal para multiplicar por -1 la derivada que entra
     this->invert = get_param("invert") == 1;
+
+    // delete file from previous run
+    ofstream outf(description(), std::ofstream::out);
+    outf.close();
 }
 
 
