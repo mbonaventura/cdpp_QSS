@@ -66,11 +66,11 @@ Model &QSS1::externalFunction(const ExternalMessage &msg)
 	       	// inferior delta crossing
 	    	diffxq[1] = -x[1];
        		diffxq[0] = q - x[0] -dQ;
-       		this->sigma = minposroot_vTime(diffxq);
+       		this->sigma = minposroot(diffxq);
 
        		// superior delta difference
        		diffxq[0] = q - x[0] + dQ;
-       		VTime sigma_up = minposroot_vTime(diffxq);
+       		VTime sigma_up = minposroot(diffxq);
 
        		// keep the smallest one
        		if(sigma_up < this->sigma){
@@ -138,35 +138,23 @@ double QSS1::get_param(const string &name)
     return Real::from_value(AbstractValue::from_string(param)).value();
 }
 
-
-float minposroot_ms(double *coeff)
-{
-    float mpr;
-
-    if(coeff[1] == 0)
-        mpr = std::numeric_limits<float>::infinity();
-    else
-        mpr = -coeff[0]/coeff[1];
-
-    if(mpr < 0)
-        mpr = std::numeric_limits<float>::infinity();
-
-    return mpr;
-}
-
-
-VTime minposroot_vTime(double *coeff){
+VTime minposroot(double *coeff){
 	float mpr;
+	VTime ret;
 
-	if(coeff[1] == 0)
-		return VTime::Inf;
-	else
+	if(coeff[1] == 0){
+		ret = VTime::Inf;
+	} else{
 		mpr = -coeff[0]/coeff[1];
+		ret = VTime(mpr);
 
-	if(mpr < 0)
-		return VTime::Inf;
+		// check for negative values and overflows in VTime.asMsecs() (VTime.asMsecs() is used to advance time)
+		if(mpr < 0 || ret.asMsecs() < 0){
+			ret = VTime::Inf;
+		}
+	}
 
-	 return VTime(mpr);
+	return ret;
 }
 
 

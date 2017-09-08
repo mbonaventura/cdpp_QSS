@@ -7,10 +7,8 @@
 
 #define QSS_MODEL_NAME "QSS1"
 
-// Borrar las 2 opciones que no vayan. Matias: yo prefiero didactivamente minposroot_vTime. Y del punto de vista de c++ prefiero minposroot_ms que devuelve un verdadero infinito
-double minposroot(double *coeff);
-float minposroot_ms(double *coeff);
-VTime minposroot_vTime(double *coeff);
+
+VTime minposroot(double *coeff);
 
 double to_seconds(const VTime &);
 
