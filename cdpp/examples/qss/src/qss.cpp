@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string>
 #include <iostream>
+#include <fstream>
 
 #include "message.h"
 #include "parsimu.h"
@@ -28,6 +29,8 @@ QSS1::QSS1(const string &name) :
     this->q = this->x[0];
 
     this->dQ = max(fabs(this->x[0]) * this->dQRel, this->dQMin);
+
+    this->sigma = VTime::Zero;
 
     // mierda temporal para multiplicar por -1 la derivada que entra
     this->invert = get_param("invert") == 1;
@@ -116,6 +119,11 @@ Model &QSS1::outputFunction(const CollectMessage &msg)
 
     y[0] = y[0] + y[1] * to_seconds(sigma); // time_advance
     y[1] = 0;	 
+
+    // send output to file
+    ofstream outf(description(), std::ofstream::out | std::ofstream::app);
+    outf << to_seconds(msg.time()) << "," << y[0] << endl;
+    outf.close();
 
 	Tuple<Real> out_value{y[0], y[1]};
 	sendOutput(msg.time(), out, out_value);
