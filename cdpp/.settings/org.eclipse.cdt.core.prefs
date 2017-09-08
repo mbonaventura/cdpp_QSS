@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/CDPP_PATH/delimiter=\:
 environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/CDPP_PATH/operation=replace
-environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/CDPP_PATH/value=/home/mbonaven/gitlab/cdpp_QSS/cdpp/cdpp_kernel
+environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/CDPP_PATH/value=${CWD}/../../../cdpp_kernel
+environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/WORKSPACE/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/WORKSPACE/operation=replace
+environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/WORKSPACE/value=${build_project}
 environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/append=true
 environment/project/cdt.managedbuild.toolchain.gnu.base.2080674121/appendContributed=true
