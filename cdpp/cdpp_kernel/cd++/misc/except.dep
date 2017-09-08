@@ -1,4 +1,0 @@
-${OBJ_DIR}/except.o except.dep : except.cpp except.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/macroexp.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/misc/except.h

@@ -1,5 +1,0 @@
-${OBJ_DIR}/cellpartition.o cellpartition.dep : cellpartition.cpp cellpartition.h \
- partitionzone.h zone.h cellpos.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/ntupla.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/misc/except.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h

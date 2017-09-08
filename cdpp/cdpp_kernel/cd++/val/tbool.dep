@@ -1,7 +1,0 @@
-${OBJ_DIR}/tbool.o tbool.dep : tbool.cpp tbool.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/misc/except.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h \
- real.h undefd.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/impresion.h \
- value.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/evaldeb.h

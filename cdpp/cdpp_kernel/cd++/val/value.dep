@@ -1,7 +1,0 @@
-${OBJ_DIR}/value.o value.dep : value.cpp value.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/impresion.h \
- real.h undefd.h tbool.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/misc/except.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/evaldeb.h \
- tuple_value.h

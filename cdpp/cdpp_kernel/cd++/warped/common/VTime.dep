@@ -1,2 +1,0 @@
-${OBJ_DIR}/VTime.o VTime.dep : VTime.cpp VTime.h \
- /afs/cern.ch/user/m/mbonaven/Downloads/cdpp/cdpp_kernel/cd++/utils/stringp.h
