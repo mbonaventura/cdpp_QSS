@@ -29,11 +29,12 @@ class QSS1 : public Atomic {
     const Port &in;
     Port &out;
 
-    double dQ, dQMin, dQRel; // VTime de cd++ usa floats (que tiene la mitad de la precision). Hay que castear al hacer VTime((float) dQ) y se pierde precision.
+    double dQ, dQMin, dQRel;
     double x[2], q;
+    double gain;
     VTime sigma; // track last change
 
-    bool invert;
+    bool log_output;
 
     double get_param(const string &);
 };

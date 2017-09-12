@@ -7,12 +7,11 @@ link : out@qssX signalOut
 
 [qssX]
 x0 : 0.5
-dQRel : 0.1
-dQMin : 0.1
-invert : 0
+dQRel : 1e-2
+dQMin : 1e-4
 
 [qssY]
 x0 : 0
-dQRel : 0.1
-dQMin : 0.1
-invert : 1
+dQRel : 1e-2
+dQMin : 1e-4
+gain : -1

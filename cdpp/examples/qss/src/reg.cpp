@@ -1,7 +1,7 @@
 #include "pmodeladm.h"
 #include "register.h"
 
-#include "qss.h"
+#include "qss1.h"
 
 
 void register_atomics_on(ParallelModelAdmin &admin)
