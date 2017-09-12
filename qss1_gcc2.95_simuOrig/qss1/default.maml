@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <Top>
+    <components> qssX@qss1 qssY@qss1&#xd;</components>
+    <Link> out@qssX in@qssY&#xd;</Link>
+    <Link> out@qssY in@qssX&#xd;</Link>
+  </Top>
+  <qssX>
+    <dQRel> 0.1&#xd;</dQRel>
+    <dQMin> 0.1&#xd;</dQMin>
+    <X0> 0.5&#xd;</X0>
+    <gain> 1&#xd;</gain>
+  </qssX>
+  <qssY>
+    <dQRel> 0.2&#xd;</dQRel>
+    <dQMin> 0.2&#xd;</dQMin>
+    <X0> 4.5&#xd;</X0>
+    <gain> -1&#xd;</gain>
+  </qssY>
+</CDPlusPlus_Builder_Version_1.0.0>
