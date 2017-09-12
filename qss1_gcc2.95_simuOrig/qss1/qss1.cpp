@@ -11,6 +11,7 @@
 // #include "tuple_value.h"
 #include "value.h"
 
+
 #include "qss1.h"
 
 using namespace std;
@@ -20,10 +21,10 @@ QSS1::QSS1(const string &name) :
 	in(addInputPort("in")),
 	out(addOutputPort("out"))
 {
-	this->dQRel = stod( MainSimulator::Instance().getParameter( description(), "dQRel" ) );
-	this->dQMin = stod( MainSimulator::Instance().getParameter( description(), "dQMin" ) );
-    this->x[0] = stod( MainSimulator::Instance().getParameter( description(), "X0" ) );
-    this->gain = stod (MainSimulator::Instance().getParameter( description(), "gain" )) ;
+	this->dQRel = str2float(MainSimulator::Instance().getParameter( description(), "dQRel" ));
+	this->dQMin = str2float( MainSimulator::Instance().getParameter( description(), "dQMin" ) );
+	this->x[0] = str2float( MainSimulator::Instance().getParameter( description(), "X0" ) );
+	this->gain = str2float (MainSimulator::Instance().getParameter( description(), "gain" )) ;
 
     this->x[1] = 0;
 
@@ -32,9 +33,9 @@ QSS1::QSS1(const string &name) :
     this->dQ = max(fabs(this->x[0]) * this->dQRel, this->dQMin);
 
     this->sigma = Time::Zero;
-
+    this->logFileName = description() + ".csv";
     // delete file from previous run
-    ofstream outf(description(), std::ofstream::out);
+    ofstream outf(this->logFileName.data(), std::ofstream::out);
     outf.close();
 }
 
@@ -42,7 +43,7 @@ QSS1::QSS1(const string &name) :
 Model &QSS1::initFunction()
 {
 	this->sigma = Time::Zero;
-	holdIn(AtomicState::active, this->sigma);
+	holdIn(active, this->sigma);
 
 	return *this;
 }
@@ -51,7 +52,8 @@ Model &QSS1::externalFunction(const ExternalMessage &msg)
 {
     double diffxq[2];
 
-    Real derx = Tuple<Real>::from_value(msg.value())[0];
+    //Real derx = Tuple<Real>::from_value(msg.value())[0];
+    double derx = msg.value ();
     derx = derx * gain;
 
 //    Time sigma = this->nextChange();
@@ -60,7 +62,7 @@ Model &QSS1::externalFunction(const ExternalMessage &msg)
     if(msg.port() == in)
     {
 	    x[0] = x[0] + x[1] * to_seconds(e);
-	    x[1] = derx.value();
+	    x[1] = derx;
 	    if(this->sigma.asMsecs() > 0)
         {
 	       	// inferior delta crossing
@@ -83,11 +85,11 @@ Model &QSS1::externalFunction(const ExternalMessage &msg)
     }
     else
     {
-	    x[0] = derx.value();
+	    x[0] = derx;
         sigma = Time::Zero;
     }
 
-    holdIn(AtomicState::active, this->sigma);
+    holdIn(active, this->sigma);
 
 	return *this;
 }
@@ -104,7 +106,7 @@ Model &QSS1::internalFunction(const InternalMessage &msg)
         passivate();
     } else {
     	this->sigma = Time((float) fabs(dQ/x[1]));
-    	holdIn(AtomicState::active, this->sigma);
+    	holdIn(active, this->sigma);
     }
 
 	return *this ;
@@ -120,12 +122,12 @@ Model &QSS1::outputFunction(const InternalMessage &msg )
     y[1] = 0;	 
 
     // send output to file
-    ofstream outf(description(), std::ofstream::out | std::ofstream::app);
+    ofstream outf(this->logFileName.data(), std::ofstream::out | std::ofstream::app);
     outf << to_seconds(msg.time()) << "," << y[0] << endl;
     outf.close();
 
-	Tuple<Real> out_value{y[0], y[1]};
-	sendOutput(msg.time(), out, out_value);
+	//Tuple<Real> out_value{y[0], y[1]};
+    sendOutput(msg.time(), out, y[0]);
 
 	return *this ;
 }

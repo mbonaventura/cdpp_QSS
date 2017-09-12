@@ -23,6 +23,7 @@ class QSS1 : public Atomic {
   	Model &outputFunction( const InternalMessage & );
 
   private:
+  	string logFileName;
     const Port &in;
     Port &out;
 

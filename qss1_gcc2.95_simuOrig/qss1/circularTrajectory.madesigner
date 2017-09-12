@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_STomIJeNEee4PZQSRIfndQ" defined="true" sourceFileRelativePath="circularTrajectory.ma">
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_STomIZeNEee4PZQSRIfndQ" instanceName="qssX">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_STomIpeNEee4PZQSRIfndQ" modelName="QSS1" defined="true" sourceFileRelativePath="qss1.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_STomI5eNEee4PZQSRIfndQ" portName="in" incomingLinks="_STomOpeNEee4PZQSRIfndQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_STomJJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOZeNEee4PZQSRIfndQ"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJZeNEee4PZQSRIfndQ" name="dQRel"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJpeNEee4PZQSRIfndQ" name="dQMin"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJ5eNEee4PZQSRIfndQ" name="X0"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomKJeNEee4PZQSRIfndQ" name="gain"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomKZeNEee4PZQSRIfndQ" name="dQRel" value="0.1"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomKpeNEee4PZQSRIfndQ" name="dQMin" value="0.1"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomK5eNEee4PZQSRIfndQ" name="X0" value="0.5"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomLJeNEee4PZQSRIfndQ" name="gain" value="1"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_STomLZeNEee4PZQSRIfndQ" instanceName="qssY">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_STomLpeNEee4PZQSRIfndQ" modelName="QSS1" defined="true" sourceFileRelativePath="qss1.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_STomL5eNEee4PZQSRIfndQ" portName="in" incomingLinks="_STomOZeNEee4PZQSRIfndQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_STomMJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOpeNEee4PZQSRIfndQ"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomMZeNEee4PZQSRIfndQ" name="dQRel"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomMpeNEee4PZQSRIfndQ" name="dQMin"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomM5eNEee4PZQSRIfndQ" name="X0"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomNJeNEee4PZQSRIfndQ" name="gain"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomNZeNEee4PZQSRIfndQ" name="dQRel" value="0.2"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomNpeNEee4PZQSRIfndQ" name="dQMin" value="0.2"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomN5eNEee4PZQSRIfndQ" name="X0" value="4.5"/>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_STomOJeNEee4PZQSRIfndQ" name="gain" value="-1"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_STomOZeNEee4PZQSRIfndQ" target="_STomL5eNEee4PZQSRIfndQ" source="_STomJJeNEee4PZQSRIfndQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_STomOpeNEee4PZQSRIfndQ" target="_STomI5eNEee4PZQSRIfndQ" source="_STomMJeNEee4PZQSRIfndQ"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_STomO5eNEee4PZQSRIfndQ" type="DEVS" element="_STomIJeNEee4PZQSRIfndQ" name="circularTrajectory.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_STomPJeNEee4PZQSRIfndQ"/>
+  </notation:Diagram>
+</xmi:XMI>

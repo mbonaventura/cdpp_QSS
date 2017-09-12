@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDPlusPlus_Builder_Version_1.0.0>
   <Top>
-    <components> qssX@qss1 qssY@qss1&#xd;</components>
+    <components> qssX@QSS1 qssY@QSS1&#xd;</components>
     <Link> out@qssX in@qssY&#xd;</Link>
     <Link> out@qssY in@qssX&#xd;</Link>
   </Top>

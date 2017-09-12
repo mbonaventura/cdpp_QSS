@@ -43,8 +43,7 @@ DEBUGFLAGS=
 LDFLAGS += -L.
 #^|
 EXAMPLESOBJS=  qss1.o register.o queue.o main.o generat.o cpu.o transduc.o distri.o com.o linpack.o debug.o trafico.o
-#
-
+#
 
 # uncomment the following lines to include DEVS-Graphs model interpreter
 INCLUDES_CPP += -I./models/ggad
@@ -110,9 +109,9 @@ backup:
 .cpp.o:
 	${CPP} -c ${INCLUDES_CPP} ${DEFINES_CPP} ${DEBUGFLAGS} ${CPPFLAGS} $<
 #^|
-qss1.o: /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/qss/qss1.cpp
+qss1.o: /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/qss1.cpp
 	${CPP} -c ${LDFLAGS} ${INCLUDES_CPP} ${EXTRA_INCLUDES} ${DEFINES_CPP} ${DEBUGFLAGS} ${CPPFLAGS} $< 
-register.o: /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/qss/register.cpp
+register.o: /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/register.cpp
 	${CPP} -c ${LDFLAGS} ${INCLUDES_CPP} ${EXTRA_INCLUDES} ${DEFINES_CPP} ${DEBUGFLAGS} ${CPPFLAGS} $< 
 #
 generat.o: generat.cpp
@@ -182,7 +181,7 @@ mainsimu.o: mainsimu.cpp
 # DO NOT DELETE
 #^|
 qss1.o: \
- /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/qss/qss1.cpp \
+ /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/qss1.cpp \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/mainsimu.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/root.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/event.h \
@@ -208,10 +207,10 @@ qss1.o: \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/model.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/message.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/strutil.h \
- /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/qss/qss1.h \
+ /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/qss1.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/atomic.h
 register.o: \
- /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/SimpleNetwork/Step3/register.cpp \
+ /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/register.cpp \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/modeladm.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/mainsimu.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/root.h \
@@ -236,15 +235,9 @@ register.o: \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/ntupla.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/portlist.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/model.h \
- /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/SimpleNetwork/Step3/networkDelayType.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/atomic.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/queue.h \
  /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/generat.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/cpu.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/transduc.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/message.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/strutil.h \
- /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/trafico.h
+ /cygdrive/C/eclipse/plugins/cdBuilder.simulator_1.0.0.201010092241/internal/atomic.h \
+ /cygdrive/C/eclipse/CD++Builder\ Example\ Workspace/DEVS\ Examples/qss1/qss1.h
 #
 #include $(OBJS:.cpp=.d)
 queue.o: queue.h atomic.h model.h port.h modelid.h time.h portlist.h real.h
