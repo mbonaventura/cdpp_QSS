@@ -1,7 +1,10 @@
 [Top]
-components : qssX@QSS1 qssY@QSS1
+components : qssX@QSS1 qssY@QSS1 
+out : outY outX 
 Link : out@qssX in@qssY
 Link : out@qssY in@qssX
+Link : out@qssY outY
+Link : out@qssX outX
 
 [qssX]
 dQRel : 0.1

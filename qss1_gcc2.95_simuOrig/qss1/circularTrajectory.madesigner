@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
   <CoupledModelType xmi:id="_STomIJeNEee4PZQSRIfndQ" defined="true" sourceFileRelativePath="circularTrajectory.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_Zoi20JeQEee4PZQSRIfndQ" portName="outY" portType="OUTPUT_PORT" incomingLinks="_b9bqkJeQEee4PZQSRIfndQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="_dSh1QJeQEee4PZQSRIfndQ" portName="outX" portType="OUTPUT_PORT" incomingLinks="_fJ0HAJeQEee4PZQSRIfndQ"/>
     <atomicModels xmi:type="AtomicModelInstance" xmi:id="_STomIZeNEee4PZQSRIfndQ" instanceName="qssX">
       <modelType xmi:type="CPPAtomicModelType" xmi:id="_STomIpeNEee4PZQSRIfndQ" modelName="QSS1" defined="true" sourceFileRelativePath="qss1.cpp">
         <ports xmi:type="InputAtomicPort" xmi:id="_STomI5eNEee4PZQSRIfndQ" portName="in" incomingLinks="_STomOpeNEee4PZQSRIfndQ"/>
-        <ports xmi:type="OutputAtomicPort" xmi:id="_STomJJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOZeNEee4PZQSRIfndQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_STomJJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOZeNEee4PZQSRIfndQ _fJ0HAJeQEee4PZQSRIfndQ"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJZeNEee4PZQSRIfndQ" name="dQRel"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJpeNEee4PZQSRIfndQ" name="dQMin"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomJ5eNEee4PZQSRIfndQ" name="X0"/>
@@ -18,7 +20,7 @@
     <atomicModels xmi:type="AtomicModelInstance" xmi:id="_STomLZeNEee4PZQSRIfndQ" instanceName="qssY">
       <modelType xmi:type="CPPAtomicModelType" xmi:id="_STomLpeNEee4PZQSRIfndQ" modelName="QSS1" defined="true" sourceFileRelativePath="qss1.cpp">
         <ports xmi:type="InputAtomicPort" xmi:id="_STomL5eNEee4PZQSRIfndQ" portName="in" incomingLinks="_STomOZeNEee4PZQSRIfndQ"/>
-        <ports xmi:type="OutputAtomicPort" xmi:id="_STomMJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOpeNEee4PZQSRIfndQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_STomMJeNEee4PZQSRIfndQ" portName="out" portType="OUTPUT_PORT" outgoingLinks="_STomOpeNEee4PZQSRIfndQ _b9bqkJeQEee4PZQSRIfndQ"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomMZeNEee4PZQSRIfndQ" name="dQRel"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomMpeNEee4PZQSRIfndQ" name="dQMin"/>
         <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_STomM5eNEee4PZQSRIfndQ" name="X0"/>
@@ -31,8 +33,115 @@
     </atomicModels>
     <links xmi:type="CoupledLink" xmi:id="_STomOZeNEee4PZQSRIfndQ" target="_STomL5eNEee4PZQSRIfndQ" source="_STomJJeNEee4PZQSRIfndQ"/>
     <links xmi:type="CoupledLink" xmi:id="_STomOpeNEee4PZQSRIfndQ" target="_STomI5eNEee4PZQSRIfndQ" source="_STomMJeNEee4PZQSRIfndQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_b9bqkJeQEee4PZQSRIfndQ" target="_Zoi20JeQEee4PZQSRIfndQ" source="_STomMJeNEee4PZQSRIfndQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_fJ0HAJeQEee4PZQSRIfndQ" target="_dSh1QJeQEee4PZQSRIfndQ" source="_STomJJeNEee4PZQSRIfndQ"/>
   </CoupledModelType>
   <notation:Diagram xmi:id="_STomO5eNEee4PZQSRIfndQ" type="DEVS" element="_STomIJeNEee4PZQSRIfndQ" name="circularTrajectory.madesigner" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_SUHHQpeNEee4PZQSRIfndQ" type="2003" element="_STomIZeNEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_SUHHRZeNEee4PZQSRIfndQ" type="5007"/>
+      <children xmi:type="notation:Node" xmi:id="_SUNN5JeNEee4PZQSRIfndQ" type="3005" element="_STomIpeNEee4PZQSRIfndQ">
+        <children xmi:type="notation:Node" xmi:id="_SUNN6JeNEee4PZQSRIfndQ" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_SUNN6ZeNEee4PZQSRIfndQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_SUNN6peNEee4PZQSRIfndQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SUNN65eNEee4PZQSRIfndQ" type="3008" element="_STomI5eNEee4PZQSRIfndQ">
+          <children xmi:type="notation:Node" xmi:id="_SUNN7peNEee4PZQSRIfndQ" type="5008"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN7JeNEee4PZQSRIfndQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN7ZeNEee4PZQSRIfndQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SUNN75eNEee4PZQSRIfndQ" type="3008" element="_STomJJeNEee4PZQSRIfndQ">
+          <children xmi:type="notation:Node" xmi:id="_SUNN8peNEee4PZQSRIfndQ" type="5008"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN8JeNEee4PZQSRIfndQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN8ZeNEee4PZQSRIfndQ"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN5ZeNEee4PZQSRIfndQ"/>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_SUNN5peNEee4PZQSRIfndQ" hint="DEVSGGAD"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN55eNEee4PZQSRIfndQ"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_SUHHQ5eNEee4PZQSRIfndQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUHHRJeNEee4PZQSRIfndQ" x="105" y="60"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SUNN4JeNEee4PZQSRIfndQ" type="2003" element="_STomLZeNEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_SUNN45eNEee4PZQSRIfndQ" type="5007"/>
+      <children xmi:type="notation:Node" xmi:id="_SUNN85eNEee4PZQSRIfndQ" type="3005" element="_STomLpeNEee4PZQSRIfndQ">
+        <children xmi:type="notation:Node" xmi:id="_SUNN95eNEee4PZQSRIfndQ" type="7002">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_SUNN-JeNEee4PZQSRIfndQ"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_SUNN-ZeNEee4PZQSRIfndQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SUNN-peNEee4PZQSRIfndQ" type="3008" element="_STomL5eNEee4PZQSRIfndQ">
+          <children xmi:type="notation:Node" xmi:id="_SUNN_ZeNEee4PZQSRIfndQ" type="5008"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN-5eNEee4PZQSRIfndQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN_JeNEee4PZQSRIfndQ"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_SUNN_peNEee4PZQSRIfndQ" type="3008" element="_STomMJeNEee4PZQSRIfndQ">
+          <children xmi:type="notation:Node" xmi:id="_SUNOAZeNEee4PZQSRIfndQ" type="5008"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN_5eNEee4PZQSRIfndQ"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNOAJeNEee4PZQSRIfndQ"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN9JeNEee4PZQSRIfndQ"/>
+        <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_SUNN9ZeNEee4PZQSRIfndQ" hint="DEVSGGAD"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN9peNEee4PZQSRIfndQ"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_SUNN4ZeNEee4PZQSRIfndQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SUNN4peNEee4PZQSRIfndQ" x="470" y="70"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ZovEEJeQEee4PZQSRIfndQ" type="2002" element="_Zoi20JeQEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_ZovEFZeQEee4PZQSRIfndQ" type="5005"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_ZovEEZeQEee4PZQSRIfndQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_ZovEEpeQEee4PZQSRIfndQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_ZovEE5eQEee4PZQSRIfndQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZovEFJeQEee4PZQSRIfndQ" x="770" y="105"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_dSh1QZeQEee4PZQSRIfndQ" type="2002" element="_dSh1QJeQEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_dSh1RpeQEee4PZQSRIfndQ" type="5005"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_dSh1QpeQEee4PZQSRIfndQ"/>
+      <styles xmi:type="notation:FillStyle" xmi:id="_dSh1Q5eQEee4PZQSRIfndQ"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_dSh1RJeQEee4PZQSRIfndQ"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dSh1RZeQEee4PZQSRIfndQ" x="320" y="25"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_STomPJeNEee4PZQSRIfndQ"/>
+    <edges xmi:type="notation:Edge" xmi:id="_SUTUgJeNEee4PZQSRIfndQ" type="4001" element="_STomOZeNEee4PZQSRIfndQ" source="_SUNN75eNEee4PZQSRIfndQ" target="_SUNN-peNEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_SUTUhJeNEee4PZQSRIfndQ" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_SUTUhZeNEee4PZQSRIfndQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_SUTUhpeNEee4PZQSRIfndQ" y="40"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_SUTUgZeNEee4PZQSRIfndQ" routing="Rectilinear"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_SUTUgpeNEee4PZQSRIfndQ"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SUTUg5eNEee4PZQSRIfndQ" points="[10, 0, -235, -10]$[122, 0, -123, -10]$[122, -10, -123, -20]$[245, -10, 0, -20]$[245, -1, 0, -11]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SUTUh5eNEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SUTUiJeNEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_SUTUiZeNEee4PZQSRIfndQ" type="4001" element="_STomOpeNEee4PZQSRIfndQ" source="_SUNN_peNEee4PZQSRIfndQ" target="_SUNN65eNEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_SUTUjZeNEee4PZQSRIfndQ" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_SUTUjpeNEee4PZQSRIfndQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_SUTUj5eNEee4PZQSRIfndQ" x="87" y="31"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_SUTUipeNEee4PZQSRIfndQ" routing="Rectilinear"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_SUTUi5eNEee4PZQSRIfndQ"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SUTUjJeNEee4PZQSRIfndQ" points="[10, 0, 495, 10]$[70, 0, 555, 10]$[70, 145, 555, 155]$[-555, 145, -70, 155]$[-555, -10, -70, 0]$[-496, -10, -11, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SUTUkJeNEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_SUTUkZeNEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_b9bqkZeQEee4PZQSRIfndQ" type="4001" element="_b9bqkJeQEee4PZQSRIfndQ" source="_SUNN_peNEee4PZQSRIfndQ" target="_ZovEEJeQEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_b9bqlZeQEee4PZQSRIfndQ" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_b9bqlpeQEee4PZQSRIfndQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_b9bql5eQEee4PZQSRIfndQ" y="40"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_b9bqkpeQEee4PZQSRIfndQ" routing="Rectilinear"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_b9bqk5eQEee4PZQSRIfndQ"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_b9bqlJeQEee4PZQSRIfndQ" points="[10, 0, -159, -3]$[144, 1, -25, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_b9hxMJeQEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_fJ0HAZeQEee4PZQSRIfndQ" type="4001" element="_fJ0HAJeQEee4PZQSRIfndQ" source="_SUNN75eNEee4PZQSRIfndQ" target="_dSh1QZeQEee4PZQSRIfndQ">
+      <children xmi:type="notation:Node" xmi:id="_fJ0HBZeQEee4PZQSRIfndQ" type="6001">
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_fJ0HBpeQEee4PZQSRIfndQ"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fJ0HB5eQEee4PZQSRIfndQ" y="40"/>
+      </children>
+      <styles xmi:type="notation:ConnectorStyle" xmi:id="_fJ0HApeQEee4PZQSRIfndQ" routing="Rectilinear"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_fJ0HA5eQEee4PZQSRIfndQ"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fJ0HBJeQEee4PZQSRIfndQ" points="[10, -8, -93, 64]$[95, -73, -8, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fJ6NoJeQEee4PZQSRIfndQ" id="TheTargetAnchor"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fJ6NoZeQEee4PZQSRIfndQ" id="(0.16,0.46)"/>
+    </edges>
   </notation:Diagram>
 </xmi:XMI>
